@@ -1,0 +1,22 @@
+/*!
+global > color
+------------------------------
+*/
+:root {
+  --color-font-base: #333;
+  --color-font-white: #f5f5f5;
+  --color-bg-base: #fff;
+  --color-bg-gray: #eee;
+  --color-bg-gray-fixed: #eee;
+  --color-bg-dark-gray: #2d2d2d;
+  --color-border: #ddd;
+  --color-primary: #5e6c5b;
+  --color-primary-light: #c7cec7;
+}
+
+[data-theme="dark"] {
+  --color-bg-base: #1e1e1e;
+  --color-font-base: #f5f5f5;
+  --color-bg-gray: #2d2d2d;
+  --color-primary-light: #5e6c5b;
+}

@@ -1,0 +1,151 @@
+@use "../global" as g;
+
+/*!
+layout > header
+------------------------------
+*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.header.is-fixed {
+  position: fixed;
+  top: -80px;
+  background-color: var(--color-primary-light);
+  color: var(--color-font-base);
+  z-index: var(--z-index-header);
+}
+
+.header-logo {
+  font-weight: bold;
+  font-family: var(--font-family-english);
+}
+
+.header-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* ナビゲーションメニュー */
+
+.nav-menu {
+  border: none;
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  background: color-mix(in srgb, transparent 0%, var(--color-bg-dark-gray) 90%);
+}
+
+// ナビゲーションメニューのダイアログのバックドロップを非表示にする
+.nav-menu::backdrop {
+  display: none;
+}
+
+// ナビゲーションメニューのダイアログを表示した時のスタイル
+.nav-menu[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// @media screen and (min-width: 768px) {
+//   .nav-menu {
+//     display: block;
+//     position: static;
+//     width: auto;
+//     height: auto;
+//     background-color: inherit;
+//   }
+// }
+
+.nav-menu-contents {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-menu-contents {
+    width: auto;
+  }
+}
+
+.nav-menu-contents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// @media screen and (min-width: 768px) {
+//   .nav-menu-contents-list {
+//     flex-direction: row;
+//     gap: 40px;
+//   }
+// }
+
+.nav-menu-contents-item {
+  white-space: nowrap;
+  font-weight: bold;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+
+// @media screen and (min-width: 768px) {
+//   .nav-menu-contents-item {
+//     color: inherit;
+//     font-size: inherit;
+//     text-align: left;
+//   }
+// }
+
+.nav-menu-contents-item a {
+  display: block;
+  padding: 4px 0;
+}
+
+.nav-menu-button,
+.nav-menu-close-button {
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: var(--color-font-white);
+  border-radius: 6px;
+  padding: 6px 16px;
+  text-transform: uppercase;
+}
+
+/* ダークモード時のボックスシャドウでボーダーを作成 */
+[data-theme="dark"] {
+  .nav-menu-button,
+  .nav-menu-close-button {
+    box-shadow: 0 0 0 2px var(--color-font-white) inset,
+      0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.nav-menu-close-button {
+  position: absolute;
+  right: 24px;
+  top: 18px;
+}
+
+// @media screen and (min-width: 768px) {
+//   .nav-menu-button,
+//   .nav-menu-close-button {
+//     display: none;
+//   }
+// }

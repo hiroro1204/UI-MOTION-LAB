@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>UI MOTION LAB</title>
+    <meta
+      name="description"
+      content="私が作成したJavaScriptのUIを掲載するサイトです。様々なインタラクションやモーションをデモとして紹介しています。"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="UI MOTION LAB" />
+    <meta
+      property="og:url"
+      content="https://hiron-folio.com/portfolio/lp/ui-motion-lab/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="UI MOTION LAB" />
+    <meta
+      property="og:description"
+      content="私が作成したJavaScriptのUIを掲載するサイトです。様々なインタラクションやモーションをデモとして紹介しています。"
+    />
+    <meta
+      property="og:image"
+      content="https://hiron-folio.com/portfolio/lp/ui-motion-lab/img/ogp.png"
+    />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:description"
+      content="私が作成したJavaScriptのUIを掲載するサイトです。様々なインタラクションやモーションをデモとして紹介しています。"
+    />
+    <meta
+      name="twitter:image:src"
+      content="https://hiron-folio.com/portfolio/lp/ui-motion-lab/img/ogp.png"
+    />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- js -->
+    <script src="js/vendor/gsap.min.js" defer></script>
+    <script src="js/main.js" type="module"></script>
+  </head>
+
+  <body>
+    <!-- テーマ切り替えアニメーション用オーバーレイ -->
+    <div class="theme-transition-overlay js-theme-overlay"></div>
+
+    <header class="header js-header">
+      <p class="header-logo">
+        <a href="/">UI MOTION LAB</a>
+      </p>
+      <dialog class="nav-menu js-nav-menu" aria-label="メニュー">
+        <button class="nav-menu-close-button js-nav-menu-close-button">
+          close
+        </button>
+
+        <nav class="nav-menu-contents" aria-label="メニューリスト">
+          <ul class="nav-menu-contents-list js-nav-menu-contents-list">
+            <li class="nav-menu-contents-item js-nav-menu-item">
+              <a href="#modal">モーダル</a>
+            </li>
+            <li class="nav-menu-contents-item js-nav-menu-item">
+              <a href="#dropdownmenu">ドロップダウンメニュー</a>
+            </li>
+            <li class="nav-menu-contents-item js-nav-menu-item">
+              <a href="#tabmenu">タブメニュー</a>
+            </li>
+            <li class="nav-menu-contents-item js-nav-menu-item">
+              <a href="#accordion">アコーディオン</a>
+            </li>
+            <li class="nav-menu-contents-item js-nav-menu-item">
+              <a href="#theme-toggle">テーマ切り替え</a>
+            </li>
+            <li class="nav-menu-contents-item js-nav-menu-item">
+              <a href="#navmenu">ナビゲーションメニュー</a>
+            </li>
+          </ul>
+        </nav>
+      </dialog>
+
+      <button class="nav-menu-button js-nav-menu-button">menu</button>
+    </header>
+
+    <div class="top-kv js-scrollTarget">
+      <div class="top-kv-title-wrap">
+        <h1 class="top-kv-title">UI MOTION LAB</h1>
+        <p class="top-kv-sub">
+          <span>JavaScriptで作るUIアニメーションの実装アーカイブ。</span
+          ><span
+            >一部の演出にはGSAPを使用し、滑らかなモーション表現を検証しています。</span
+          >
+        </p>
+      </div>
+    </div>
+
+    <main class="top-main js-scrollTarget">
+      <div class="l-container-s">
+        <div class="top-main-inner">
+          <section class="modal" id="modal">
+            <h2 class="top-section-title">1.モーダル</h2>
+
+            <div class="top-section-contents">
+              <div class="top-section-contents-item u-center">
+                <button class="modal-open-button js-modal-open-button">
+                  モーダルOPEN
+                </button>
+
+                <div class="modal-bg js-modal-bg"></div>
+
+                <dialog
+                  class="modal-dialog js-modal-dialog"
+                  aria-label="ひろんについてのモーダル"
+                >
+                  <div class="modal-dialog-inner">
+                    <div class="modal-dialog-contents js-modal-dialog-contents">
+                      <button class="modal-close-button js-modal-close-button">
+                        <span class="u-visually-hidden">閉じる</span>
+                      </button>
+
+                      <p>
+                        こんにちは、ひろんと申します。<br />
+                        <a
+                          href="https://kehijingu.jp/"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          >神社</a
+                        >と<a
+                          href="https://www.starbucks.co.jp/"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          >スタバ</a
+                        >が好きな30代後半の男性です。<br />
+                      </p>
+                    </div>
+                  </div>
+                </dialog>
+              </div>
+
+              <div class="top-section-description">
+                <p>ボタンをクリックするとモーダルが開きます。</p>
+
+                <strong>【動作】</strong>
+                <ul>
+                  <li>ボタンクリックでモーダルを開く</li>
+                  <li>
+                    閉じるボタン、背景クリック、Escapeキーで閉じることができます
+                  </li>
+                  <li>モーダル表示中は背景のスクロールを無効化します</li>
+                </ul>
+
+                <strong>【アニメーション】</strong>
+                <ul>
+                  <li>背景のフェードイン/アウト</li>
+                  <li>コンテンツのフェード＆スケールアニメーション</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="dropdownmenu" id="dropdownmenu">
+            <h2 class="top-section-title">2.ドロップダウンメニュー</h2>
+
+            <div class="top-section-contents">
+              <div class="user-icon">
+                <button class="user-icon-button js-user-button">
+                  <img
+                    src="img/top/image_user.png"
+                    alt="ユーザー"
+                    width="200"
+                    height="200"
+                  />
+                  <span class="u-visually-hidden">アカウント：山田太郎</span>
+                </button>
+
+                <nav
+                  class="user-menu js-dropdownmenu"
+                  aria-label="ユーザーメニュー"
+                >
+                  <ul class="dropdownmenu-list">
+                    <li class="dropdownmenu-item">
+                      <a
+                        href="https://www.notion.so/Portfolio-288100e31f93808ab5b6e6876f72488b?source=copy_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >ユーザー名：ひろん</a
+                      >
+                    </li>
+                    <li class="dropdownmenu-item">
+                      <a
+                        href="https://www.notion.so/Portfolio-288100e31f93808ab5b6e6876f72488b?source=copy_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >ステータス：オンライン</a
+                      >
+                    </li>
+                    <li class="dropdownmenu-item">
+                      <a
+                        href="https://www.notion.so/Portfolio-288100e31f93808ab5b6e6876f72488b?source=copy_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >対応可否：対応可</a
+                      >
+                    </li>
+                    <li class="dropdownmenu-item">
+                      <a
+                        href="https://www.notion.so/Portfolio-288100e31f93808ab5b6e6876f72488b?source=copy_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >アカウント設定</a
+                      >
+                    </li>
+                    <li class="dropdownmenu-item">
+                      <button>ログアウト</button>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="top-section-description">
+                <p>ユーザーアイコンをクリックするとメニューが開きます。</p>
+
+                <strong>【動作】</strong>
+                <ul>
+                  <li>ユーザーアイコンをクリックで開閉を切り替え</li>
+                  <li>メニュー外の領域をクリックで閉じる</li>
+                  <li>Escapeキーで閉じる（メニューが開いている時のみ）</li>
+                </ul>
+
+                <strong>【アニメーション】</strong>
+                <ul>
+                  <li>フェード＆スケールアニメーション</li>
+                  <li>
+                    アニメーション開始/完了時に`is-open`クラスが付与/削除されます
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="tabmenu" id="tabmenu">
+            <h2 class="top-section-title">3.タブメニュー</h2>
+
+            <div class="top-section-contents">
+              <div class="tabmenu-wrap">
+                <ul class="tabmenu-list">
+                  <li class="tabmenu-item">
+                    <button class="tabmenu-button is-active" data-button="0">
+                      機能一覧
+                    </button>
+                  </li>
+                  <li class="tabmenu-item">
+                    <button class="tabmenu-button" data-button="1">
+                      ひろんについて
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tabmenu-contents-wrap">
+                  <div class="tabmenu-contents is-active" data-content="0">
+                    <ul>
+                      <li>
+                        モーダルウィンドウ・ドロップダウンメニュー・アコーディオンなどのUIサンプルを掲載
+                      </li>
+                      <li>
+                        各UIにJavaScriptアニメーション（GSAP等）を実装、動作デモ付き
+                      </li>
+                      <li>HTML/CSS/JSのサンプルコードをコピー可能</li>
+                      <li>GitHubにサンプルコードを公開</li>
+                    </ul>
+                  </div>
+
+                  <div class="tabmenu-contents" data-content="1">
+                    <p>
+                      初めまして、ひろんと申します。<br />
+                      神社とスタバが好きな30代後半の男性です。<br />
+                      このサイトでは自作のUIコンポーネントや、役立つサンプルコードを公開しています！
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="top-section-description">
+                <p>
+                  タブボタンをクリックすると、対応するコンテンツに切り替わります。
+                </p>
+
+                <strong>【動作】</strong>
+                <ul>
+                  <li>タブボタンをクリックで対応するコンテンツを表示</li>
+                  <li>
+                    アクティブなタブとコンテンツには`is-active`クラスが付与されます
+                  </li>
+                </ul>
+
+                <strong>【アニメーション】</strong>
+                <ul>
+                  <li>
+                    フェードインしながら上から下にスライドして表示されます
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="accordion" id="accordion">
+            <h2 class="top-section-title">4.アコーディオン</h2>
+
+            <div class="top-section-contents">
+              <div class="accordion-wrap">
+                <details class="accordion-details js-details">
+                  <summary class="accordion-summary js-summary">
+                    <span>UI MOTION LABとはどのようなサイトですか？</span>
+                    <span class="accordion-icon">
+                      <span></span>
+                      <span></span>
+                    </span>
+                  </summary>
+                  <div class="accordion-contents js-contents">
+                    <div class="accordion-contents-inner">
+                      <p>
+                        UI MOTION
+                        LABは、コーダーである「ひろん」がJavaScriptで作成したUIアニメーションの実装アーカイブを公開するサイトです。さまざまなウェブサイトで使われている動きや、ユーザー体験を向上させるためのアニメーション表現を、実際のコードとともに紹介しています。今後も新しいアニメーションを追加していく予定です。
+                      </p>
+                    </div>
+                  </div>
+                </details>
+
+                <details class="accordion-details js-details">
+                  <summary class="accordion-summary js-summary">
+                    <span
+                      >このサイトで使用しているJavaScriptのライブラリは何ですか？</span
+                    >
+                    <span class="accordion-icon">
+                      <span></span>
+                      <span></span>
+                    </span>
+                  </summary>
+                  <div class="accordion-contents js-contents">
+                    <div class="accordion-contents-inner">
+                      <p>
+                        GSAPを使用しています。また、スクロールイベントにはIntersection
+                        Observer APIを使用しています。
+                      </p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+              <div class="top-section-description">
+                <p>質問項目をクリックすると回答が開閉します。</p>
+
+                <strong>【動作】</strong>
+                <ul>
+                  <li>質問項目をクリックで開閉を切り替え</li>
+                  <li>
+                    コンテンツの高さを自動で測定し、その高さに応じたアニメーションを実行
+                  </li>
+                  <li>アニメーション中は連打防止機能が働きます</li>
+                </ul>
+
+                <strong>【アニメーション】</strong>
+                <ul>
+                  <li>高さとフェードのアニメーション</li>
+                  <li>開いている状態では`is-open`クラスが付与されます</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="theme-toggle" id="theme-toggle">
+            <h2 class="top-section-title">5.テーマ切り替え</h2>
+
+            <div class="top-section-contents">
+              <div class="theme-toggle-wrap u-center">
+                <button
+                  class="theme-toggle-button js-theme-toggle"
+                  aria-label="テーマを切り替える"
+                >
+                  <img
+                    class="theme-toggle-icon theme-toggle-icon--dark js-theme-icon-dark"
+                    src="img/top/image_theme-toggle--dark.png"
+                    alt="ダークテーマに切り替える"
+                    width="200"
+                    height="200"
+                  />
+                  <img
+                    class="theme-toggle-icon theme-toggle-icon--light js-theme-icon-light"
+                    src="img/top/image_theme-toggle--light.png"
+                    alt="ライトテーマに切り替える"
+                    width="200"
+                    height="200"
+                  />
+                </button>
+              </div>
+              <div class="top-section-description">
+                <p>
+                  ボタンをクリックするとライト/ダークテーマが切り替わります。
+                </p>
+
+                <strong>【動作】</strong>
+                <ul>
+                  <li>ボタンクリックでライトとダークを切り替え</li>
+                  <li>アニメーション中は連打防止機能が働きます</li>
+                </ul>
+
+                <strong>【アニメーション】</strong>
+                <ul>
+                  <li>画面全体が上から下に塗りつぶされるように展開</li>
+                  <li>塗りつぶし完了時にテーマが切り替わります</li>
+                  <li>その後、オーバーレイがフェードアウト</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="navmenu" id="navmenu">
+            <h2 class="top-section-title">6.ナビゲーションメニュー</h2>
+
+            <div class="top-section-contents">
+              <p>ナビゲーションメニューはヘッダーに配置されています。</p>
+              <div class="top-section-description">
+                <p>
+                  ヘッダーのメニューボタンをクリックすると全画面メニューが開きます。
+                </p>
+
+                <strong>【動作】</strong>
+                <ul>
+                  <li>メニューボタンをクリックでメニューを開く</li>
+                  <li>
+                    閉じるボタン、メニュー項目をクリック、Escapeキーで閉じる
+                  </li>
+                  <li>
+                    メニュー表示中は背景のスクロールを無効化し、スクロール位置を保持します
+                  </li>
+                  <li>
+                    メニュー項目をクリックすると該当セクションにスムーズスクロール
+                  </li>
+                </ul>
+
+                <strong>【アニメーション】</strong>
+                <ul>
+                  <li>フェードイン/アウトアニメーション</li>
+                  <li>メニューを閉じた後にスクロールが実行されます</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="sample-code">
+            <h2 class="top-section-title">7.サンプルコード</h2>
+            <div class="top-section-contents">
+              <div class="sample-code-wrap">
+                <p>サンプルコードはGitHubで公開しています。</p>
+                <a
+                  class="sample-code-link"
+                  href="https://github.com/hiron-folio/ui-motion-lab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >→GitHubでサンプルコードを確認する</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="l-container-s">
+        <div class="footer-inner">
+          <p class="footer-copyright">
+            <small>&copy; 2025 UI MOTION LAB. All rights reserved.</small>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

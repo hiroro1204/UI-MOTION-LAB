@@ -1,0 +1,27 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-kv
+------------------------------
+*/
+
+.top-kv {
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-gray);
+}
+
+.top-kv-title {
+  font-family: var(--font-family-english);
+  font-size: min(8vw, 80px);
+  font-weight: bold;
+}
+.top-kv-title-wrap {
+  width: 90%;
+}
+
+.top-kv-sub span {
+  display: block;
+}

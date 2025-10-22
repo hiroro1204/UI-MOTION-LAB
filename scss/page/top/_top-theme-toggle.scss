@@ -1,0 +1,63 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-theme-toggle
+------------------------------
+*/
+
+.theme-toggle {
+  margin-inline: auto;
+  width: 100%;
+}
+
+.theme-toggle-button {
+  position: relative;
+  background-color: var(--color-bg-gray-fixed);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.theme-toggle-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+// ライトテーマでは--darkを表示
+.theme-toggle-icon--dark {
+  opacity: 1;
+}
+
+.theme-toggle-icon--light {
+  opacity: 0;
+}
+
+// ダークテーマでは--lightを表示
+[data-theme="dark"] {
+  .theme-toggle-icon--dark {
+    opacity: 0;
+  }
+
+  .theme-toggle-icon--light {
+    opacity: 1;
+  }
+}
+
+/* テーマ切り替えアニメーション */
+.theme-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
