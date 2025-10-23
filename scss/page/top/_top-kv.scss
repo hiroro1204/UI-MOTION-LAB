@@ -15,13 +15,18 @@ page > top > top-kv
 
 .top-kv-title {
   font-family: var(--font-family-english);
-  font-size: min(8vw, 80px);
+  font-size: min(10vw, 80px);
   font-weight: bold;
 }
 .top-kv-title-wrap {
   width: 90%;
+  display: grid;
+  place-items: center;
 }
 
-.top-kv-sub span {
-  display: block;
+.top-kv-sub {
+  font-size: min(3vw, 18px);
+  span {
+    display: block;
+  }
 }
