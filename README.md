@@ -2,7 +2,8 @@
 
 # 🎨 UI Motion Lab
 
-**🔗 デモ URL:** （デプロイ後に追加）
+**🔗 デモ URL:**
+https://hiron-folio.com/portfolio/lp/ui-motion-lab/
 
 これまでの学習で作成した、 UI コンポーネント集。
 
