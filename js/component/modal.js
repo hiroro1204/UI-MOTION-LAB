@@ -1,5 +1,4 @@
 export const initializeModal = () => {
-  console.log("modal");
   const modal = document.querySelector(".js-modal-dialog");
   const modalBg = document.querySelector(".js-modal-bg");
   const modalContents = document.querySelector(".js-modal-dialog-contents");

@@ -1,0 +1,131 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-thumbnail-slider
+------------------------------
+*/
+.top-thumbnail-slider-wrap {
+  margin-inline: auto;
+  max-width: 800px;
+  width: 90%;
+}
+
+.top-thumbnail-slider {
+  .splide__arrow {
+    width: 40px;
+    height: 40px;
+    background-color: color-mix(in srgb, var(--color-primary) 90%, transparent);
+    opacity: 1;
+
+    @include g.mq("md") {
+      width: 56px;
+      height: 56px;
+    }
+
+    // 既存のSVGを非表示
+    svg {
+      display: none;
+    }
+
+    // 三角アイコンをCSSで作成（clip-pathを使用）
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 15px;
+      background-color: var(--color-font-white);
+
+      @include g.mq("md") {
+        width: 16px;
+        height: 20px;
+      }
+    }
+
+    // 前の矢印（左向き三角）
+    &--prev::before {
+      clip-path: polygon(0 50%, 100% 0, 100% 100%);
+      transform: translate(-65%, -50%);
+    }
+
+    // 次の矢印（右向き三角）
+    &--next::before {
+      clip-path: polygon(0 0, 0 100%, 100% 50%);
+      transform: translate(-35%, -50%);
+    }
+  }
+
+  .splide__arrow--next {
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  .splide__arrow--prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.top-thumbnail-slider-item-figure {
+  figcaption {
+    font-size: 20px;
+    text-align: center;
+    padding-block: 16px;
+  }
+}
+
+.bottom-thumbnail-slider-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+
+  @include g.mq() {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+.bottom-thumbnail-slider-item {
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  overflow: hidden;
+  list-style: none;
+  cursor: pointer;
+
+  .bottom-thumbnail-slider-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.3s, scale 0.3s;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 1;
+        scale: 0.95;
+      }
+    }
+
+    &:focus-visible {
+      opacity: 1;
+    }
+  }
+
+  .bottom-thumbnail-slider-button.is-active {
+    opacity: 1;
+    scale: 0.95;
+  }
+}

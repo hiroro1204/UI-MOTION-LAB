@@ -15,6 +15,21 @@
     <link rel="icon" href="img/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PRLPML2H");
+    </script>
+    <!-- End Google Tag Manager -->
+
     <!-- ogp -->
     <meta property="og:site_name" content="UI MOTION LAB" />
     <meta
@@ -51,14 +66,27 @@
     />
 
     <!-- css -->
+    <link rel="stylesheet" href="css/vendor/splide.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- js -->
     <script src="js/vendor/gsap.min.js" defer></script>
+    <script src="js/vendor/splide.min.js" defer></script>
     <script src="js/main.js" type="module"></script>
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PRLPML2H"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- テーマ切り替えアニメーション用オーバーレイ -->
     <div class="theme-transition-overlay js-theme-overlay"></div>
 
@@ -87,6 +115,9 @@
             </li>
             <li class="nav-menu-contents-item js-nav-menu-item">
               <a href="#theme-toggle">テーマ切り替え</a>
+            </li>
+            <li class="nav-menu-contents-item js-nav-menu-item">
+              <a href="#slider">スライダー</a>
             </li>
             <li class="nav-menu-contents-item js-nav-menu-item">
               <a href="#navmenu">ナビゲーションメニュー</a>
@@ -428,6 +459,354 @@
             </div>
           </section>
 
+          <section class="slider" id="slider">
+            <h2 class="top-section-title">6.スライダー</h2>
+
+            <div class="top-section-contents">
+              <div class="top-thumbnail-slider-wrap">
+                <div
+                  class="splide top-thumbnail-slider js-thumbnail-slider"
+                  role="region"
+                  aria-label="神社の写真"
+                >
+                  <div class="splide__track top-thumbnail-slider-track">
+                    <ul class="splide__list top-thumbnail-slider-list">
+                      <li
+                        class="splide__slide top-thumbnail-slider-item js-thumbnail-slider-slide"
+                        id="top-thumbnail-slide-1"
+                      >
+                        <figure class="top-thumbnail-slider-item-figure">
+                          <img
+                            src="img/top/image_temple.jpg"
+                            alt="気比神宮の写真"
+                            width="1200"
+                            height="800"
+                          />
+                          <figcaption>福井県 氣比神宮</figcaption>
+                        </figure>
+                      </li>
+                      <li
+                        class="splide__slide top-thumbnail-slider-item js-thumbnail-slider-slide"
+                        id="top-thumbnail-slide-2"
+                      >
+                        <figure class="top-thumbnail-slider-item-figure">
+                          <img
+                            src="img/top/image_temple_02.jpg"
+                            alt="伏見稲荷神社の写真"
+                            width="1200"
+                            height="800"
+                          />
+                          <figcaption>京都府 伏見稲荷神社</figcaption>
+                        </figure>
+                      </li>
+                      <li
+                        class="splide__slide top-thumbnail-slider-item js-thumbnail-slider-slide"
+                        id="top-thumbnail-slide-3"
+                      >
+                        <figure class="top-thumbnail-slider-item-figure">
+                          <img
+                            src="img/top/image_temple_03.jpg"
+                            alt="出雲大社の写真"
+                            width="1200"
+                            height="800"
+                          />
+                          <figcaption>島根県 出雲大社</figcaption>
+                        </figure>
+                      </li>
+                      <li
+                        class="splide__slide top-thumbnail-slider-item js-thumbnail-slider-slide"
+                        id="top-thumbnail-slide-4"
+                      >
+                        <figure class="top-thumbnail-slider-item-figure">
+                          <img
+                            src="img/top/image_temple_04.jpg"
+                            alt="明治神宮の写真"
+                            width="1200"
+                            height="800"
+                          />
+                          <figcaption>東京都 明治神宮</figcaption>
+                        </figure>
+                      </li>
+                      <li
+                        class="splide__slide top-thumbnail-slider-item js-thumbnail-slider-slide"
+                        id="top-thumbnail-slide-5"
+                      >
+                        <figure class="top-thumbnail-slider-item-figure">
+                          <img
+                            src="img/top/image_temple_05.jpg"
+                            alt="東京大神宮の写真"
+                            width="1200"
+                            height="800"
+                          />
+                          <figcaption>東京都 東京大神宮</figcaption>
+                        </figure>
+                      </li>
+                      <li
+                        class="splide__slide top-thumbnail-slider-item js-thumbnail-slider-slide"
+                        id="top-thumbnail-slide-6"
+                      >
+                        <figure class="top-thumbnail-slider-item-figure">
+                          <img
+                            src="img/top/image_temple_06.jpg"
+                            alt="金龍神社の写真"
+                            width="1200"
+                            height="800"
+                          />
+                          <figcaption>奈良県 金龍神社</figcaption>
+                        </figure>
+                      </li>
+                      <li
+                        class="splide__slide top-thumbnail-slider-item js-thumbnail-slider-slide"
+                        id="top-thumbnail-slide-7"
+                      >
+                        <figure class="top-thumbnail-slider-item-figure">
+                          <img
+                            src="img/top/image_temple_07.jpg"
+                            alt="稲佐の浜の写真"
+                            width="1200"
+                            height="800"
+                          />
+                          <figcaption>島根県 稲佐の浜</figcaption>
+                        </figure>
+                      </li>
+                      <li
+                        class="splide__slide top-thumbnail-slider-item js-thumbnail-slider-slide"
+                        id="top-thumbnail-slide-8"
+                      >
+                        <figure class="top-thumbnail-slider-item-figure">
+                          <img
+                            src="img/top/image_temple_08.jpg"
+                            alt="厳島神社の写真"
+                            width="1200"
+                            height="800"
+                          />
+                          <figcaption>広島県 厳島神社</figcaption>
+                        </figure>
+                      </li>
+                      <li
+                        class="splide__slide top-thumbnail-slider-item js-thumbnail-slider-slide"
+                        id="top-thumbnail-slide-9"
+                      >
+                        <figure class="top-thumbnail-slider-item-figure">
+                          <img
+                            src="img/top/image_temple_09.jpg"
+                            alt="元伊勢 籠神社の写真"
+                            width="1200"
+                            height="800"
+                          />
+                          <figcaption>京都府 元伊勢 籠神社</figcaption>
+                        </figure>
+                      </li>
+                      <li
+                        class="splide__slide top-thumbnail-slider-item js-thumbnail-slider-slide"
+                        id="top-thumbnail-slide-10"
+                      >
+                        <figure class="top-thumbnail-slider-item-figure">
+                          <img
+                            src="img/top/image_temple_10.jpg"
+                            alt="來宮神社の写真"
+                            width="1200"
+                            height="800"
+                          />
+                          <figcaption>静岡県 來宮神社</figcaption>
+                        </figure>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="bottom-thumbnail-slider-list">
+                  <li class="bottom-thumbnail-slider-item">
+                    <button
+                      type="button"
+                      class="bottom-thumbnail-slider-button js-thumbnail-slider-thumb is-active"
+                      tabindex="0"
+                      aria-controls="top-thumbnail-slide-1"
+                      aria-label="氣比神宮の写真のスライドを表示"
+                      aria-current="true"
+                    >
+                      <img
+                        src="img/top/image_temple.jpg"
+                        alt="氣比神宮の写真"
+                        width="1200"
+                        height="800"
+                      />
+                    </button>
+                  </li>
+                  <li class="bottom-thumbnail-slider-item">
+                    <button
+                      type="button"
+                      class="bottom-thumbnail-slider-button js-thumbnail-slider-thumb"
+                      tabindex="0"
+                      aria-controls="top-thumbnail-slide-2"
+                      aria-label="伏見稲荷神社の写真のスライドを表示"
+                    >
+                      <img
+                        src="img/top/image_temple_02.jpg"
+                        alt="伏見稲荷神社の写真"
+                        width="1200"
+                        height="800"
+                      />
+                    </button>
+                  </li>
+                  <li class="bottom-thumbnail-slider-item">
+                    <button
+                      type="button"
+                      class="bottom-thumbnail-slider-button js-thumbnail-slider-thumb"
+                      tabindex="0"
+                      aria-controls="top-thumbnail-slide-3"
+                      aria-label="出雲大社の写真のスライドを表示"
+                    >
+                      <img
+                        src="img/top/image_temple_03.jpg"
+                        alt="出雲大社の写真"
+                        width="1200"
+                        height="800"
+                      />
+                    </button>
+                  </li>
+                  <li class="bottom-thumbnail-slider-item">
+                    <button
+                      type="button"
+                      class="bottom-thumbnail-slider-button js-thumbnail-slider-thumb"
+                      tabindex="0"
+                      aria-controls="top-thumbnail-slide-4"
+                      aria-label="明治神宮の写真のスライドを表示"
+                    >
+                      <img
+                        src="img/top/image_temple_04.jpg"
+                        alt="明治神宮の写真"
+                        width="1200"
+                        height="800"
+                      />
+                    </button>
+                  </li>
+                  <li class="bottom-thumbnail-slider-item">
+                    <button
+                      type="button"
+                      class="bottom-thumbnail-slider-button js-thumbnail-slider-thumb"
+                      tabindex="0"
+                      aria-controls="top-thumbnail-slide-5"
+                      aria-label="東京大神宮の写真のスライドを表示"
+                    >
+                      <img
+                        src="img/top/image_temple_05.jpg"
+                        alt="東京大神宮の写真"
+                        width="1200"
+                        height="800"
+                      />
+                    </button>
+                  </li>
+                  <li class="bottom-thumbnail-slider-item">
+                    <button
+                      type="button"
+                      class="bottom-thumbnail-slider-button js-thumbnail-slider-thumb"
+                      tabindex="0"
+                      aria-controls="top-thumbnail-slide-6"
+                      aria-label="金龍神社の写真のスライドを表示"
+                    >
+                      <img
+                        src="img/top/image_temple_06.jpg"
+                        alt="金龍神社の写真"
+                        width="1200"
+                        height="800"
+                      />
+                    </button>
+                  </li>
+                  <li class="bottom-thumbnail-slider-item">
+                    <button
+                      type="button"
+                      class="bottom-thumbnail-slider-button js-thumbnail-slider-thumb"
+                      tabindex="0"
+                      aria-controls="top-thumbnail-slide-7"
+                      aria-label="稲佐の浜の写真のスライドを表示"
+                    >
+                      <img
+                        src="img/top/image_temple_07.jpg"
+                        alt="稲佐の浜の写真"
+                        width="1200"
+                        height="800"
+                      />
+                    </button>
+                  </li>
+                  <li class="bottom-thumbnail-slider-item">
+                    <button
+                      type="button"
+                      class="bottom-thumbnail-slider-button js-thumbnail-slider-thumb"
+                      tabindex="0"
+                      aria-controls="top-thumbnail-slide-8"
+                      aria-label="厳島神社の写真のスライドを表示"
+                    >
+                      <img
+                        src="img/top/image_temple_08.jpg"
+                        alt="厳島神社の写真"
+                        width="1200"
+                        height="800"
+                      />
+                    </button>
+                  </li>
+                  <li class="bottom-thumbnail-slider-item">
+                    <button
+                      type="button"
+                      class="bottom-thumbnail-slider-button js-thumbnail-slider-thumb"
+                      tabindex="0"
+                      aria-controls="top-thumbnail-slide-9"
+                      aria-label="元伊勢 籠神社の写真のスライドを表示"
+                    >
+                      <img
+                        src="img/top/image_temple_09.jpg"
+                        alt="元伊勢 籠神社の写真"
+                        width="1200"
+                        height="800"
+                      />
+                    </button>
+                  </li>
+                  <li class="bottom-thumbnail-slider-item">
+                    <button
+                      type="button"
+                      class="bottom-thumbnail-slider-button js-thumbnail-slider-thumb"
+                      tabindex="0"
+                      aria-controls="top-thumbnail-slide-10"
+                      aria-label="來宮神社の写真のスライドを表示"
+                    >
+                      <img
+                        src="img/top/image_temple_10.jpg"
+                        alt="來宮神社の写真"
+                        width="1200"
+                        height="800"
+                      />
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="top-section-description">
+                <p>
+                  下側のサムネイルを選ぶと、上部のメインスライドが同じ写真に切り替わります。
+                </p>
+
+                <strong>【動作】</strong>
+                <ul>
+                  <li>
+                    <a
+                      href="https://splidejs.com/"
+                      target="_blank"
+                      rel="noopener"
+                      >Splide</a
+                    >
+                    を使用したスライド切り替え
+                  </li>
+                  <li>サムネイルをクリックすると対応する写真にジャンプ</li>
+                </ul>
+
+                <strong>【アニメーション】</strong>
+                <ul>
+                  <li>splideのフェードイン/アウトを使用したアニメーション</li>
+                  <li>
+                    選択されたサムネイルにはCSSでアクティブなスタイルを付与しています
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
           <section class="navmenu" id="navmenu">
             <h2 class="top-section-title">6.ナビゲーションメニュー</h2>
 

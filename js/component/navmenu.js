@@ -55,14 +55,16 @@ export const initializeNavMenu = () => {
   });
 
   // クローズボタンクリックでclose
-  closeButton.addEventListener("click", () => {
-    closeMenu();
-  });
+  if (closeButton) {
+    closeButton.addEventListener("click", () => {
+      closeMenu();
+    });
+  }
 
   // メニュー項目クリック時の処理
   navMenuItems.forEach((item) => {
     item.addEventListener("click", (event) => {
-      if (event.target.tagName.toLowerCase() === "a") {
+      if (event.target.tagName && event.target.tagName.toLowerCase() === "a") {
         event.preventDefault();
         const targetHash = event.target.hash;
         const targetElement = targetHash
@@ -73,6 +75,7 @@ export const initializeNavMenu = () => {
         closeMenu(() => {
           requestAnimationFrame(() => {
             if (targetElement) {
+              // まず通常通りスクロール（block: 'start' で先頭表示）
               targetElement.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
