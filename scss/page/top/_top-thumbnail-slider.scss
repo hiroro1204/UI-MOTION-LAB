@@ -8,18 +8,35 @@ page > top > top-thumbnail-slider
   margin-inline: auto;
   max-width: 800px;
   width: 90%;
+  position: relative;
 }
 
 .top-thumbnail-slider {
+  .splide__arrows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 66.5%;
+  }
   .splide__arrow {
     width: 40px;
     height: 40px;
     background-color: color-mix(in srgb, var(--color-primary) 90%, transparent);
     opacity: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
     @include g.mq("md") {
       width: 56px;
       height: 56px;
+    }
+
+    &:disabled,
+    &.is-inactive {
+      display: none;
+      pointer-events: none;
     }
 
     // 既存のSVGを非表示
